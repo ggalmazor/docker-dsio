@@ -4,8 +4,10 @@ This image publishes a volume called `/workdir` to be used as the working direct
 
 Instructions:
 
-1. Create a Google Cloud Platform service account and store the JSON keys file in a file named `keys.json` in your workdir at root level
-2. Run dsio with `docker run -it --rm -v /path/to/your/workdir:/workdir dsio`
+1. Create a work directory somewhere in your file system
+2. Create a Google Cloud Platform service account and store the JSON keys file in a file named `keys.json` in your workdir at root level
+3. Run dsio with `docker run -it --rm -v /path/to/your/workdir:/workdir ggalmazor/dsio`
 
 Example: List all kinds
-`docker run -it --rm -v /path/to/your/workdir:/workdir dsio query --project-id some-project-id 'SELECT * FROM __kinds__' `
+`docker run -it --rm -v /path/to/your/workdir:/workdir ggalmazor/dsio query --project-id some-project-id 'SELECT * FROM __kinds__'`
+
